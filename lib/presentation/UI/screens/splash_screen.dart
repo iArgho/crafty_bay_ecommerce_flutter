@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce_flutter/utility/path_util.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
