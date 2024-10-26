@@ -3,10 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/splash_screen.dart';
 import 'package:get/route_manager.dart';
 
-void main() {
-  runApp(const CraftyBay());
-}
-
 class CraftyBay extends StatelessWidget {
   const CraftyBay({super.key});
 
@@ -16,7 +12,7 @@ class CraftyBay extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'CraftyBay',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF07ADAE)),
           useMaterial3: true,
           primaryColor: const Color(0xFF07ADAE),
           primarySwatch:
