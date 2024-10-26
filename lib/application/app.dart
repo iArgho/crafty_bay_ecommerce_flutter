@@ -18,7 +18,8 @@ class CraftyBay extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
           primaryColor: const Color(0xFF07ADAE),
-          primarySwatch: MaterialColor(0xFF07ADAE, ColorPalette().color),
+          primarySwatch:
+              MaterialColor(AppColor.primaryColor.value, AppColor().color),
           progressIndicatorTheme:
               const ProgressIndicatorThemeData(color: Color(0xFF07ADAE))),
       home: const SplashScreen(),
