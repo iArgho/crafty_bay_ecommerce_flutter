@@ -1,7 +1,8 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/home_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/authentication/email_verification_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/route_manager.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -19,11 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   void goToNextScreen() {
     Future.delayed(const Duration(seconds: 3)).then((_) {
-      Navigator.pushAndRemoveUntil(
-        context,
-        MaterialPageRoute(builder: (context) => HomeScreen()),
-        (route) => false, // This condition removes all previous routes
-      );
+      Get.offAll(const EmailVerificationScreen());
     });
   }
 

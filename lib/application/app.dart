@@ -1,6 +1,7 @@
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/splash_screen.dart';
+import 'package:get/route_manager.dart';
 
 void main() {
   runApp(const CraftyBay());
@@ -11,7 +12,7 @@ class CraftyBay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'CraftyBay',
       theme: ThemeData(

@@ -12,8 +12,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  flutter_svg: ^1.0.0 # Add this line for SVG support
+  flutter_svg: ^1.0.0
   simple_circular_progress_bar: ^1.0.2
+  get: ^4.6.6
 
 dev_dependencies:
   flutter_test:
