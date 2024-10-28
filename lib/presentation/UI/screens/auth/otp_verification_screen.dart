@@ -3,7 +3,6 @@ import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:get/route_manager.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
@@ -62,6 +61,7 @@ class _EmailVerificationScreenState extends State<OtpVerificationScreen> {
                 selectedColor: AppColor.primaryColor,
                 inactiveColor: AppColor.primaryColor,
                 selectedFillColor: Colors.white,
+                inactiveFillColor: Colors.white,
               ),
               animationDuration: const Duration(milliseconds: 300),
               enableActiveFill: true,
