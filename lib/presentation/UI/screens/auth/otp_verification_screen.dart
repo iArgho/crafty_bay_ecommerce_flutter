@@ -1,7 +1,10 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/auth/complete_profile_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/route_manager.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 
 class OtpVerificationScreen extends StatefulWidget {
@@ -76,7 +79,9 @@ class _EmailVerificationScreenState extends State<OtpVerificationScreen> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(const CompleteProfileScreen());
+                },
                 child: const Text(
                   'Next',
                   style: TextStyle(
@@ -91,7 +96,7 @@ class _EmailVerificationScreenState extends State<OtpVerificationScreen> {
               height: 32,
             ),
             RichText(
-              text: TextSpan(
+              text: const TextSpan(
                 style: TextStyle(
                   color: Colors.grey,
                 ),
@@ -109,7 +114,7 @@ class _EmailVerificationScreenState extends State<OtpVerificationScreen> {
             ),
             TextButton(
               onPressed: () {},
-              child: Text(
+              child: const Text(
                 'Resent Code',
                 style: TextStyle(color: Colors.grey),
               ),
