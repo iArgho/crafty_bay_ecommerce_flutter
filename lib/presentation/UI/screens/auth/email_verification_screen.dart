@@ -1,6 +1,8 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/auth/otp_verification_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/route_manager.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
   const EmailVerificationScreen({super.key});
@@ -42,10 +44,8 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
             ),
             TextFormField(
               decoration: const InputDecoration(
+                hintText: 'Enter Email Address',
                 contentPadding: EdgeInsets.symmetric(horizontal: 16),
-                border: OutlineInputBorder(),
-                enabledBorder: OutlineInputBorder(),
-                disabledBorder: OutlineInputBorder(),
               ),
             ),
             const SizedBox(
@@ -60,7 +60,9 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
                     borderRadius: BorderRadius.circular(5),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(const OtpVerificationScreen());
+                },
                 child: const Text(
                   'Next',
                   style: TextStyle(
