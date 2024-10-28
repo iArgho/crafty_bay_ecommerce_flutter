@@ -42,14 +42,34 @@ class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
             ),
             TextFormField(
               decoration: const InputDecoration(
+                contentPadding: EdgeInsets.symmetric(horizontal: 16),
                 border: OutlineInputBorder(),
                 enabledBorder: OutlineInputBorder(),
                 disabledBorder: OutlineInputBorder(),
               ),
             ),
-            ElevatedButton(
-              onPressed: () {},
-              child: Text('Next'),
+            const SizedBox(
+              height: 8,
+            ),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(vertical: 5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Next',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
             ),
           ],
         )),

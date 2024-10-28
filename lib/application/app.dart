@@ -12,13 +12,28 @@ class CraftyBay extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'CraftyBay',
       theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Color(0xFF07ADAE)),
-          useMaterial3: true,
-          primaryColor: const Color(0xFF07ADAE),
-          primarySwatch:
-              MaterialColor(AppColor.primaryColor.value, AppColor().color),
-          progressIndicatorTheme:
-              const ProgressIndicatorThemeData(color: Color(0xFF07ADAE))),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF07ADAE)),
+        useMaterial3: true,
+        primaryColor: const Color(0xFF07ADAE),
+        primarySwatch:
+            MaterialColor(AppColor.primaryColor.value, AppColor().color),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: const Color(0xFF07ADAE),
+          ),
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          enabledBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF07ADAE)),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Color(0xFF07ADAE)),
+          ),
+        ),
+        progressIndicatorTheme: const ProgressIndicatorThemeData(
+          color: Color(0xFF07ADAE),
+        ),
+      ),
       home: const SplashScreen(),
     );
   }
