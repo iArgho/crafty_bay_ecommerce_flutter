@@ -1,4 +1,5 @@
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/auth/otp_verification_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/home_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -81,7 +82,7 @@ class _EmailVerificationScreenState extends State<CompleteProfileScreen> {
               height: 16,
             ),
             TextFormField(
-              maxLines: 2, // Allows up to 2 lines in the text field
+              maxLines: 2,
               decoration: const InputDecoration(
                 hintText: 'Shipping Address',
                 contentPadding:
@@ -101,7 +102,7 @@ class _EmailVerificationScreenState extends State<CompleteProfileScreen> {
                   ),
                 ),
                 onPressed: () {
-                  Get.to(const OtpVerificationScreen());
+                  Get.to(const HomeScreen());
                 },
                 child: const Text(
                   'Complete',
