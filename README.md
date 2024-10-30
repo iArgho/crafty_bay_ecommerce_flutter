@@ -1,16 +1,29 @@
 # crafty_bay_ecommerce_flutter
 
-A new Flutter project.
+# Crafty Bay E-Commerce Flutter
+
+Crafty Bay is an e-commerce mobile application built with Flutter, designed for users to browse and purchase products seamlessly. The app leverages Firebase for backend services and includes features like user authentication, product browsing, and secure checkout.
+
+## Features
+
+- **User Authentication:** Sign up, sign in, and email verification.
+- **Product Browsing:** View products by category, search functionality.
+- **Product Details:** View product details, descriptions, and images.
+- **Shopping Cart:** Add products to the cart, adjust quantities.
+- **Checkout:** Complete purchase with secure payment processing.
+- **Responsive UI:** Optimized for both Android and iOS.
+
+## Project Structure
+
+- `lib/`
+  - `presentation/`: Contains all UI screens, widgets, and utility functions.
+  - `data/`: Manages data handling, such as API integrations and local data storage.
+  - `models/`: Contains data models for products, users, etc.
+  - `services/`: Houses Firebase and other service configurations.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### Prerequisites
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter SDK: [Install Flutter](https://flutter.dev/docs/get-started/install)
+- Android Studio or Xcode for emulator/simulator.
