@@ -1,4 +1,3 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/auth/otp_verification_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/home_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
