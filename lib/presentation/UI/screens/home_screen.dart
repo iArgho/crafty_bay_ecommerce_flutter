@@ -76,17 +76,17 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 16,
               ),
               CarouselSlider(
-                options: CarouselOptions(height: 150.0),
+                options: CarouselOptions(height: 180.0),
                 items: [1, 2, 3, 4, 5].map((i) {
                   return Builder(
                     builder: (BuildContext context) {
                       return Container(
                           width: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.symmetric(horizontal: 5.0),
-                          decoration: BoxDecoration(color: Colors.amber),
+                          margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                          decoration: const BoxDecoration(color: Colors.amber),
                           child: Text(
                             'text $i',
-                            style: TextStyle(fontSize: 16.0),
+                            style: const TextStyle(fontSize: 16.0),
                           ));
                     },
                   );
