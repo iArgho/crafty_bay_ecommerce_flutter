@@ -50,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     padding: const EdgeInsets.all(12),
                     child: Icon(
                       Icons.search,
-                      color: Theme.of(context).primaryColor, // Corrected line
+                      color: Theme.of(context).primaryColor,
                     ),
                   ),
                   hintText: 'Search',
@@ -84,9 +84,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: MediaQuery.of(context).size.width,
                           margin: const EdgeInsets.symmetric(horizontal: 5.0),
                           decoration: const BoxDecoration(color: Colors.amber),
-                          child: Text(
-                            'text $i',
-                            style: const TextStyle(fontSize: 16.0),
+                          child: Center(
+                            child: Text(
+                              'text $i',
+                              style: const TextStyle(fontSize: 16.0),
+                            ),
                           ));
                     },
                   );
