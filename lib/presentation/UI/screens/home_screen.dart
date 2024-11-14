@@ -76,7 +76,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 16,
               ),
               const CarouselSliderWidget(),
-              
+               const SizedBox(
+                height: 16,
+              ),
+              Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  color: Colors.amber,
+                ),
+              ),
             ],
           ),
         ),
