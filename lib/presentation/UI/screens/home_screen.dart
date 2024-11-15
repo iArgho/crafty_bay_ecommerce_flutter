@@ -1,5 +1,5 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/carousel_slider_widget.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/circular_icon_button.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/home_sider.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -72,20 +72,8 @@ class _HomeScreenState extends State<HomeScreen> {
                       const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
                 ),
               ),
-              const SizedBox(
-                height: 16,
-              ),
-              const CarouselSliderWidget(),
-               const SizedBox(
-                height: 16,
-              ),
-              Container(
-                width: 50,
-                height: 50,
-                decoration: BoxDecoration(
-                  color: Colors.amber,
-                ),
-              ),
+              const SizedBox(height: 16),
+              HomeSlider(),
             ],
           ),
         ),
