@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class SectionTitle extends StatelessWidget {
-  const SectionTitle({
+class SectionHeader extends StatelessWidget {
+  const SectionHeader({
     super.key,
     required this.title,
     required this.onTap,
@@ -17,7 +17,7 @@ class SectionTitle extends StatelessWidget {
         Text(
           title,
           style: const TextStyle(
-            fontSize: 20,
+            fontSize: 18,
             color: Colors.black87,
             fontWeight: FontWeight.w600,
           ),

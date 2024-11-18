@@ -1,5 +1,7 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/category_card.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/circular_icon_button.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/home_sider.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/section_header.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -43,6 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               TextField(
                 decoration: InputDecoration(
@@ -75,45 +78,28 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(height: 16),
               HomeSlider(),
               const SizedBox(height: 8),
-              SectionTitle(
+              SectionHeader(
                 title: 'Categories',
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 120,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const CategoryCard();
+                  },
+                ),
+              ),
+              SectionHeader(
+                title: 'Popular',
                 onTap: () {},
               ),
             ],
           ),
         ),
       ),
-    );
-  }
-}
-
-class SectionTitle extends StatelessWidget {
-  const SectionTitle({
-    super.key,
-    required this.title,
-    required this.onTap,
-  });
-  final String title;
-  final VoidCallback onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 20,
-            color: Colors.black87,
-            fontWeight: FontWeight.w600,
-          ),
-        ),
-        TextButton(
-          onPressed: onTap,
-          child: const Text('See All'),
-        ),
-      ],
     );
   }
 }
