@@ -21,7 +21,7 @@ class CircularIconButton extends StatelessWidget {
           backgroundColor: Colors.black12,
           child: Icon(
             icon,
-            color: Colors.grey,
+            color: Colors.black45,
           ),
         ),
       ),

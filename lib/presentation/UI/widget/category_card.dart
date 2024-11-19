@@ -17,7 +17,7 @@ class CategoryCard extends StatelessWidget {
             height: 80,
             width: 80,
             decoration: BoxDecoration(
-              color: AppColor.primaryColor.withOpacity(0.15),
+              color: AppColor.primaryColor.withOpacity(0.1),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const Icon(
@@ -26,11 +26,14 @@ class CategoryCard extends StatelessWidget {
               color: AppColor.primaryColor,
             ),
           ),
+          const SizedBox(
+            height: 4,
+          ),
           const Text(
             'Category',
             style: TextStyle(
               color: AppColor.primaryColor,
-              fontSize: 14,
+              fontSize: 12,
               fontWeight: FontWeight.w500,
             ),
           ),

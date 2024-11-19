@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
+        automaticallyImplyLeading: false,
         title: Row(
           children: [
             SvgPicture.asset(ImagePath().logoNav),
