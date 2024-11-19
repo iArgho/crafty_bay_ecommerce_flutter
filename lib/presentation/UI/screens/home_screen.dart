@@ -1,6 +1,7 @@
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/category_card.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/circular_icon_button.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/home_sider.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_card.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/section_header.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
@@ -95,6 +96,16 @@ class _HomeScreenState extends State<HomeScreen> {
               SectionHeader(
                 title: 'Popular',
                 onTap: () {},
+              ),
+              SizedBox(
+                height: 160,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const ProductCard();
+                  },
+                ),
               ),
             ],
           ),
