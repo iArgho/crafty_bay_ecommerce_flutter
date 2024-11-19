@@ -24,6 +24,7 @@ class CategoryCard extends StatelessWidget {
               Icons.category,
               size: 50,
               color: AppColor.primaryColor,
+            
             ),
           ),
           const SizedBox(
@@ -34,7 +35,7 @@ class CategoryCard extends StatelessWidget {
             style: TextStyle(
               color: AppColor.primaryColor,
               fontSize: 12,
-              fontWeight: FontWeight.w500,
+              fontWeight: FontWeight.w600,
             ),
           ),
         ],
