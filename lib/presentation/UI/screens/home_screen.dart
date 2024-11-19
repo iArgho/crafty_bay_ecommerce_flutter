@@ -3,7 +3,6 @@ import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/category_car
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/home_sider.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_card.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/section_header.dart';
-
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -96,4 +95,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
