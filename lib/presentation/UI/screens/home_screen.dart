@@ -98,7 +98,35 @@ class _HomeScreenState extends State<HomeScreen> {
                 onTap: () {},
               ),
               SizedBox(
-                height: 160,
+                height: 142,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const ProductCard();
+                  },
+                ),
+              ),
+              SectionHeader(
+                title: 'Special',
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 142,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 10,
+                  itemBuilder: (context, index) {
+                    return const ProductCard();
+                  },
+                ),
+              ),
+              SectionHeader(
+                title: 'New',
+                onTap: () {},
+              ),
+              SizedBox(
+                height: 142,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 10,

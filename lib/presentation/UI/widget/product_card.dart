@@ -9,7 +9,7 @@ class ProductCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        width: 120,
+        width: 100,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(8),
@@ -22,7 +22,7 @@ class ProductCard extends StatelessWidget {
           ],
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               height: 90,
@@ -42,25 +42,28 @@ class ProductCard extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 8),
+            const SizedBox(height: 4),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 8.0),
-              child: Text(
-                'Product Name',
-                style: TextStyle(
-                  fontSize: 10,
-                  fontWeight: FontWeight.bold,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Product Name',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
                 ),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
               ),
             ),
             const Padding(
-              padding: EdgeInsets.all(8),
+              padding: EdgeInsets.symmetric(horizontal: 8.0),
               child: Row(
                 children: [
                   Text(
-                    ' \$99',
+                    '\$99',
                     style: TextStyle(
                       fontSize: 10,
                       color: AppColor.primaryColor,
