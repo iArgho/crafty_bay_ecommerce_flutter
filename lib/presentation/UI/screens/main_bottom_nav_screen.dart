@@ -1,3 +1,7 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_cart_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_category_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_home_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_wish_screen';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 
@@ -5,18 +9,17 @@ class MainBottomNavScreen extends StatefulWidget {
   const MainBottomNavScreen({super.key});
 
   @override
-  State<MainBottomNavScreen> createState() =>
-      _BottomNavigationBarExampleState();
+  State<MainBottomNavScreen> createState() => _MainBottomNavScreenState();
 }
 
-class _BottomNavigationBarExampleState
-    extends State<MainBottomNavScreen> {
+class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   int _selectedIndex = 0;
 
   static const List<Widget> _widgetOptions = <Widget>[
-    HomeScreen(),
-    BusinessScreen(),
-    SchoolScreen(),
+    BottomHomeScreen(),
+    BottomCategoryScreen(),
+    BottomCartScreen(),
+    BottomWishScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -29,69 +32,65 @@ class _BottomNavigationBarExampleState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('BottomNavigationBar Sample'),
+        title: Text(_getAppBarTitle(_selectedIndex)),
+        backgroundColor: AppColor.primaryColor,
       ),
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.category),
+            label: 'Category',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.shopping_bag),
+            label: 'Cart',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: 'Wish',
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: AppColor.primaryColor,
+        unselectedItemColor: Colors.grey,
         onTap: _onItemTapped,
       ),
     );
   }
-}
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Index 0: Home',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      ),
-    );
+  String _getAppBarTitle(int index) {
+    switch (index) {
+      case 0:
+        return 'Home';
+      case 1:
+        return 'Category';
+      case 2:
+        return 'Cart';
+      case 3:
+        return 'Wish List';
+      default:
+        return 'Crafty Bay';
+    }
   }
 }
 
-class BusinessScreen extends StatelessWidget {
-  const BusinessScreen({super.key});
+
+class BottomWishScreen extends StatelessWidget {
+  const BottomWishScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-        'Index 1: Business',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-}
-
-class SchoolScreen extends StatelessWidget {
-  const SchoolScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Index 2: School',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+        'Your Wish List',
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
       ),
     );
   }
