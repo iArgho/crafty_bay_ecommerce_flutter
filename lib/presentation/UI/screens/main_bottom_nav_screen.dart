@@ -1,7 +1,7 @@
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_cart_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_category_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_home_screen.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_wish_screen';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_wish_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 
@@ -15,11 +15,11 @@ class MainBottomNavScreen extends StatefulWidget {
 class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _widgetOptions = <Widget>[
-    BottomHomeScreen(),
-    BottomCategoryScreen(),
-    BottomCartScreen(),
-    BottomWishScreen(),
+  final List<Widget> _widgetOptions = <Widget>[
+    const BottomHomeScreen(),
+    const BottomCategoryScreen(),
+    const BottomCartScreen(),
+    const BottomWishScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -64,7 +64,6 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
     );
   }
 
-
   String _getAppBarTitle(int index) {
     switch (index) {
       case 0:
@@ -78,20 +77,5 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
       default:
         return 'Crafty Bay';
     }
-  }
-}
-
-
-class BottomWishScreen extends StatelessWidget {
-  const BottomWishScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Your Wish List',
-        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-      ),
-    );
   }
 }
