@@ -10,12 +10,12 @@ class BottomCartScreen extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 3, 
-          crossAxisSpacing: 8, 
-          mainAxisSpacing: 8, 
+          crossAxisCount: 3,
+          crossAxisSpacing: 8,
+          mainAxisSpacing: 8,
           childAspectRatio: 0.8,
         ),
-        itemCount: 10,
+        itemCount: 16,
         itemBuilder: (context, index) {
           return const ProductCard();
         },
