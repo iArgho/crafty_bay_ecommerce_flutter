@@ -36,7 +36,7 @@ class ProductCard extends StatelessWidget {
               ),
               child: const Center(
                 child: Icon(
-                  Icons.category,
+                  Icons.flutter_dash,
                   size: 50,
                   color: AppColor.primaryColor,
                 ),
