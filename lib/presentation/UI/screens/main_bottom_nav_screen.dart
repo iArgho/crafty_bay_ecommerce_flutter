@@ -31,10 +31,12 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(_getAppBarTitle(_selectedIndex)),
-        backgroundColor: AppColor.primaryColor,
-      ),
+      appBar: _selectedIndex == 0
+          ? null // Hide AppBar for Home
+          : AppBar(
+              title: Text(_getAppBarTitle(_selectedIndex)),
+              backgroundColor: AppColor.primaryColor,
+            ),
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -66,8 +68,6 @@ class _MainBottomNavScreenState extends State<MainBottomNavScreen> {
 
   String _getAppBarTitle(int index) {
     switch (index) {
-      case 0:
-        return 'Home';
       case 1:
         return 'Category';
       case 2:
