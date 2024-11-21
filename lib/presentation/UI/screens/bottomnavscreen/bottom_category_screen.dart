@@ -1,3 +1,4 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/category_card.dart';
 import 'package:flutter/material.dart';
 
 class BottomCategoryScreen extends StatelessWidget {
@@ -5,10 +6,17 @@ class BottomCategoryScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        'Explore Categories',
-        style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+    return SizedBox(
+      height: double.infinity,
+      child: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 3,
+          mainAxisSpacing: 5,
+        ),
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const CategoryCard();
+        },
       ),
     );
   }
