@@ -26,12 +26,12 @@ class HomeSlider extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   margin: const EdgeInsets.symmetric(horizontal: 5.0),
                   decoration: const BoxDecoration(
-                    color: Colors.amber,
+                    color: AppColor.primaryColor,
                   ),
                   child: Center(
                     child: Text(
                       'text $i',
-                      style: const TextStyle(fontSize: 16.0),
+                      style: const TextStyle(fontSize: 16.0, color: Colors.white, fontWeight: FontWeight.bold),
                     ),
                   ),
                 );

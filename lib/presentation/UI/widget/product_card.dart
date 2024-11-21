@@ -38,7 +38,7 @@ class ProductCard extends StatelessWidget {
                 child: Icon(
                   Icons.category,
                   size: 50,
-                  color: Colors.blue,
+                  color: AppColor.primaryColor,
                 ),
               ),
             ),
