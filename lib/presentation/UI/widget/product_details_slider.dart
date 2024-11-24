@@ -23,14 +23,14 @@ class ProductDetailsSlider extends StatelessWidget {
             _selectedSlider.value = page;
           },
         ),
-          items: [1, 2, 3, 4, 5].map((i) {
+          items: [1, 2, 3, 4].map((i) {
             return Builder(
               builder: (BuildContext context) {
                 return Container(
                   decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        Color.fromARGB(255, 220, 220, 220),
+                        Color.fromARGB(255, 224, 223, 223),
                         Colors.white,
                       ],
                       begin: Alignment.bottomCenter,
@@ -42,7 +42,7 @@ class ProductDetailsSlider extends StatelessWidget {
                     child: Icon(
                       Icons.flutter_dash,
                       size: 120.0,
-                      color: Colors.blue,
+                      color: AppColor.primaryColor,
                     ),
                   ),
                 );
@@ -56,11 +56,11 @@ class ProductDetailsSlider extends StatelessWidget {
                          valueListenable: _selectedSlider,
                          builder: (context, value, _) {
             List<Widget> list = [];
-            for (int i = 0; i < 5; i++) {
+            for (int i = 0; i < 4; i++) {
               list.add(
                 Container(
-                  width: 12,
-                  height: 12,
+                  width: 11,
+                  height: 11,
                   margin: const EdgeInsets.symmetric(horizontal: 4),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
@@ -72,7 +72,7 @@ class ProductDetailsSlider extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: list,
             );
-                         },
+                     },
                        ),
          ),
       ],
