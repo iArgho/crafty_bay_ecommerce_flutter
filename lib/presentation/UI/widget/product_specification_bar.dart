@@ -35,7 +35,7 @@ class ProductSpecificationBar extends StatelessWidget {
           style: TextStyle(color: AppColor.primaryColor, fontWeight: FontWeight.w600),
         ),
         SizedBox(width: 4,),
-            Icon(Icons.heart_broken, color: AppColor.primaryColor),
+            Icon(Icons.favorite, color: AppColor.primaryColor),
       ],
     ),
         ],
