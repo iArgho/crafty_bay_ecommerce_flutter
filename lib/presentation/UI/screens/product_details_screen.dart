@@ -1,17 +1,16 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_color.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_details_slider.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_size.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_specification_bar.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   ProductDetailsScreen({super.key});
   final ValueNotifier<int> _selectedSlider = ValueNotifier(0);
   final ValueNotifier<int> _selectedIteam = ValueNotifier(0);
-  final ValueNotifier<int> _selectedSize = ValueNotifier(0); // To track selected size
-
+  final ValueNotifier<int> _selectedSize = ValueNotifier(0);
   @override
   Widget build(BuildContext context) {
-    // List of sizes
     final List<String> sizes = ['X', 'XL', '2L', 'XXL'];
 
     return Scaffold(
@@ -36,35 +35,7 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
-            child: ValueListenableBuilder(
-              valueListenable: _selectedIteam,
-              builder: (context, value, _) {
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: List.generate(5, (index) {
-                    return GestureDetector(
-                      onTap: () {
-                        _selectedIteam.value = index; // Update selected color
-                      },
-                      child: Container(
-                        width: 24,
-                        height: 24,
-                        margin: const EdgeInsets.symmetric(horizontal: 4),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(12),
-                          color: value == index
-                              ? AppColor.primaryColor // Selected color
-                              : [Colors.red, Colors.yellow, Colors.green, Colors.blue, Colors.purple][index],
-                        ),
-                      ),
-                    );
-                  }),
-                );
-              },
-            ),
-          ),
+          ProductColor(selectedIteam: _selectedIteam),
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
             child: Text(
@@ -76,40 +47,29 @@ class ProductDetailsScreen extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: ValueListenableBuilder(
-              valueListenable: _selectedSize,
-              builder: (context, value, _) {
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: List.generate(sizes.length, (index) {
-                    return GestureDetector(
-                      onTap: () {
-                        _selectedSize.value = index; // Update selected size
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.symmetric(horizontal: 4),
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                        decoration: BoxDecoration(
-                          border: Border.all(
-                            color: value == index ? AppColor.primaryColor : Colors.grey,
-                          ),
-                          borderRadius: BorderRadius.circular(6),
-                          color: value == index ? AppColor.primaryColor : Colors.white,
-                        ),
-                        child: Text(
-                          sizes[index],
-                          style: TextStyle(
-                            color: value == index ? Colors.white : Colors.black87,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
-                );
-              },
+          ProductSize(selectedSize: _selectedSize, sizes: sizes),
+              const SizedBox(height: 14),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0,),
+            child: Text(
+              'Description',
+              style: TextStyle(
+                color: Colors.black54,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ),
+            const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 8.0,),
+            child: Text(
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptat.',
+              textAlign: TextAlign.justify,
+              style: TextStyle(
+                color: Colors.black54,
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+              ),
             ),
           ),
         ],
