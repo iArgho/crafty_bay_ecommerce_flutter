@@ -1,7 +1,7 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_color.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_details_slider.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_size.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_specification_bar.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/productdetailswidget/product_color.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/productdetailswidget/product_details_slider.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/productdetailswidget/product_size.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/productdetailswidget/product_specification_bar.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -71,6 +71,7 @@ class ProductDetailsScreen extends StatelessWidget {
                 fontWeight: FontWeight.w600,
               ),
             ),
+            
           ),
         ],
       ),
