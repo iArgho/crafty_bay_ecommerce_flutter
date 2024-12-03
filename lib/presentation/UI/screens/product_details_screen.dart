@@ -18,9 +18,14 @@ class ProductDetailsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        leading: const BackButton(),
-        title: const Text('Product Details'),
-        titleSpacing: 2,
+        title: const Row(
+          children: [
+            Text(
+              'Product Details',
+              
+            ),
+          ],
+        ),
       ),
       body: SafeArea(
         child: Column(
@@ -92,11 +97,11 @@ class ProductDetailsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
                   children: [
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text('Price'),
+                        Text('Price'),
                         Text(
                           '\$100',
                           style: TextStyle(
