@@ -22,7 +22,6 @@ class ProductDetailsScreen extends StatelessWidget {
           children: [
             Text(
               'Product Details',
-              
             ),
           ],
         ),

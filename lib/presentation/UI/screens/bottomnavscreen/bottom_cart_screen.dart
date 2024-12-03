@@ -11,7 +11,6 @@ class BottomCartScreen extends StatelessWidget {
           children: [
             Text(
               'Product Details',
-              
             ),
           ],
         ),
