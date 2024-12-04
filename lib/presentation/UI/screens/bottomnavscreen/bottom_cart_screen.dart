@@ -1,3 +1,4 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/cart_list_iteam_widget.dart';
 import 'package:flutter/material.dart';
 
 class BottomCartScreen extends StatelessWidget {
@@ -10,22 +11,7 @@ class BottomCartScreen extends StatelessWidget {
         leading: const BackButton(),
         title: const Text('Cart'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const ListTile(
-              leading: Icon(Icons.shopping_cart),
-              title: Text('Item 1'),
-              subtitle: Text('Price: \$10.00'),
-              trailing: Text('Qty: 1'),
-            ),
-            const Divider(),
-        
-          ],
-        ),
-      ),
+      body: const CartListItem(),
     );
   }
 }
