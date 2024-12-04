@@ -11,7 +11,12 @@ class BottomCartScreen extends StatelessWidget {
         leading: const BackButton(),
         title: const Text('Cart'),
       ),
-      body: const CartListItem(),
+      body: ListView.builder(  
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return const CartListItem();
+        },
+      ),
     );
   }
 }

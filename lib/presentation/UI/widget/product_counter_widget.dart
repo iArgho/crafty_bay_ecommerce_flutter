@@ -5,6 +5,7 @@ class ProductCounter extends StatefulWidget {
   const ProductCounter({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _ProductCounterState createState() => _ProductCounterState();
 }
 
@@ -26,7 +27,6 @@ class _ProductCounterState extends State<ProductCounter> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
       children: [
         IconButton(
           onPressed: _decrement,
@@ -34,7 +34,7 @@ class _ProductCounterState extends State<ProductCounter> {
         ),
         Text(
           '$quantity',
-          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
         ),
         IconButton(
           onPressed: _increment,
