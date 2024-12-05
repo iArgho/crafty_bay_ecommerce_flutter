@@ -44,7 +44,7 @@ class BottomCartScreen extends StatelessWidget {
                     const Spacer(),
                     GestureDetector(
                       onTap: () {
-                        // Add your tap handling logic here
+              
                       },
                       child: Container(
                         decoration: BoxDecoration(

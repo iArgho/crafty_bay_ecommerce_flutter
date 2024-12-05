@@ -1,7 +1,6 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_counter_widget.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:input_quantity/input_quantity.dart';
 
 class ProductSpecificationBar extends StatelessWidget {
   const ProductSpecificationBar({
@@ -10,8 +9,8 @@ class ProductSpecificationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      const Column(
+    return const Row(children: [
+      Column(
         children: [
           Padding(
             padding: EdgeInsets.all(8.0),
@@ -40,28 +39,10 @@ class ProductSpecificationBar extends StatelessWidget {
     ),
         ],
       ),
-      const Spacer(
+      Spacer(
         
       ),
-      Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: InputQty(
-            decoration: const QtyDecorationProps(
-                    qtyStyle: QtyStyle.classic,
-             ),
-              maxVal: 100,
-              initVal: 0,
-              minVal: -100,
-              steps: 1,
-              onQtyChanged: (val) {
-                if (kDebugMode) {
-                  print(val);
-                }
-              },
-            ),
-        ),
-      ),
+      ProductCounter(),
       
     ],);
   }
