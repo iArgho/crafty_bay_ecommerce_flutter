@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/circular_icon_button.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/circular_icon_button.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';

@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/auth/complete_profile_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/screens/auth/complete_profile_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';

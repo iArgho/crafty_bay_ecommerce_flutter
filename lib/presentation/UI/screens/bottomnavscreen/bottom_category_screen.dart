@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/category_card.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/category_card.dart';
 import 'package:flutter/material.dart';
 
 class BottomCategoryScreen extends StatelessWidget {

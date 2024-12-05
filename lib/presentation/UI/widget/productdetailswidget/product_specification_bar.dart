@@ -1,4 +1,4 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_counter_widget.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/product_counter_widget.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 

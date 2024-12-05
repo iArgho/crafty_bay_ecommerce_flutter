@@ -1,9 +1,9 @@
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/appbar_elements.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/category_card.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/home_sider.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/product_card.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/search_bar.dart';
-import 'package:crafty_bay_ecommerce_flutter/presentation/UI/widget/section_header.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/appbar_elements.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/category_card.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/home_sider.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/product_card.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/search_bar.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/ui/widget/section_header.dart';
 import 'package:flutter/material.dart';
 
 class BottomHomeScreen extends StatelessWidget {
