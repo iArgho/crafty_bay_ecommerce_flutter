@@ -113,7 +113,9 @@ class _EmailVerificationScreenState extends State<OtpVerificationScreen> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                
+              },
               child: const Text(
                 'Resent Code',
                 style: TextStyle(color: Colors.grey),

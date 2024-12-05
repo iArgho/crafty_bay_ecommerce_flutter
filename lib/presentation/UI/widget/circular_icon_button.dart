@@ -1,3 +1,4 @@
+import 'package:crafty_bay_ecommerce_flutter/presentation/utility/color_palette.dart';
 import 'package:flutter/material.dart';
 
 class CircularIconButton extends StatelessWidget {
@@ -18,10 +19,10 @@ class CircularIconButton extends StatelessWidget {
         padding: const EdgeInsets.all(3.5),
         child: CircleAvatar(
           radius: 17,
-          backgroundColor: Colors.black12,
+          backgroundColor: const Color.fromARGB(31, 178, 177, 177),
           child: Icon(
             icon,
-            color: Colors.black45,
+            color: AppColor.primaryColor,
           ),
         ),
       ),

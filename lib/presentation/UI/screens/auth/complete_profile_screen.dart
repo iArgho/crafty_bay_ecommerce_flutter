@@ -1,4 +1,5 @@
 import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/bottomnavscreen/bottom_home_screen.dart';
+import 'package:crafty_bay_ecommerce_flutter/presentation/UI/screens/main_bottom_nav_screen.dart';
 import 'package:crafty_bay_ecommerce_flutter/presentation/utility/path_util.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -101,7 +102,7 @@ class _EmailVerificationScreenState extends State<CompleteProfileScreen> {
                   ),
                 ),
                 onPressed: () {
-                  Get.to(const BottomHomeScreen());
+                  Get.to(const MainBottomNavScreen());
                 },
                 child: const Text(
                   'Complete',
