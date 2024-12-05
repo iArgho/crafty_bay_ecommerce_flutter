@@ -10,10 +10,6 @@ class BottomCategoryScreen extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: [
-            IconButton(
-              icon: const Icon(Icons.arrow_back_ios, color: Colors.black54),
-              onPressed: () {},
-            ),
             const Text(
               'Category List',
               style: TextStyle(

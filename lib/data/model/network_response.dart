@@ -1,11 +1,12 @@
+
 class NetworkResponse {
   final bool isSuccess;
   final int statusCode;
-  final dynamic responseJson;
+  final Map<String, dynamic>? responseJson;
 
-  NetworkResponse(bool bool, int statusCode, jsonDecode, {
+  NetworkResponse({
     required this.isSuccess,
     required this.statusCode,
-    required this.responseJson,
+    this.responseJson,
   });
 }
