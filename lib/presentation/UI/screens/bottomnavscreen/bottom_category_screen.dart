@@ -9,8 +9,8 @@ class BottomCategoryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Row(
-          children: [
-            const Text(
+          children: const [
+            Text(
               'Category List',
               style: TextStyle(
                 color: Colors.black54,
