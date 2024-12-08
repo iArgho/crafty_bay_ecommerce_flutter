@@ -8,8 +8,8 @@ class BottomCategoryScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: const [
+        title: const Row(
+          children: [
             Text(
               'Category List',
               style: TextStyle(
