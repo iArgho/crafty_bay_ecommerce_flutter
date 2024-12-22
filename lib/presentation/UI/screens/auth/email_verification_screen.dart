@@ -15,7 +15,7 @@ class EmailVerificationScreen extends StatefulWidget {
 class _EmailVerificationScreenState extends State<EmailVerificationScreen> {
 
   final TextEditingController _emailTEcontroller=TextEditingController();
-  GlobalKey<FormState> _formKey=GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey=GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
