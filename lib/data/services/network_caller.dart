@@ -1,5 +1,3 @@
 class NetworkCaller {
-  void getRequest(){
-    
-  }
+  void getRequest(verifyEmail) {}
 }
